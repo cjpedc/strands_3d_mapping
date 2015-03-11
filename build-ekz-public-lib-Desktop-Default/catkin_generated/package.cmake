@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "ekz_public_lib")
+set(ekz_public_lib_MAINTAINER "Johan Ekekrantz <ekz@kth.se>")
+set(ekz_public_lib_DEPRECATED "")
+set(ekz_public_lib_VERSION "0.0.9")
+set(ekz_public_lib_BUILD_DEPENDS "cv_bridge" "libg2o" "opencv2" "libpcl-all-dev" "pcl_ros" "roscpp" "rospy" "sensor_msgs" "std_msgs")
+set(ekz_public_lib_RUN_DEPENDS "cv_bridge" "libg2o" "opencv2" "libpcl-all" "pcl_ros" "roscpp" "rospy" "sensor_msgs" "std_msgs")
+set(ekz_public_lib_BUILDTOOL_DEPENDS "catkin")

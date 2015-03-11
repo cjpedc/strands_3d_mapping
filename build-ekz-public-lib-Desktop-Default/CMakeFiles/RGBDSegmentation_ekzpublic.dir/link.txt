@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC -O4 -g -pg -Wunknown-pragmas -Wno-unknown-pragmas -Wsign-compare   -Wno-deprecated    -shared -Wl,-soname,libRGBDSegmentation_ekzpublic.so -o libRGBDSegmentation_ekzpublic.so CMakeFiles/RGBDSegmentation_ekzpublic.dir/src/RGBDSegmentation/RGBDSegmentation.cpp.o  -L/opt/ros/indigo/lib 
