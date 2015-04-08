@@ -21,10 +21,6 @@ add_definitions(${PCL_DEFINITIONS})
 find_package(OpenCV REQUIRED)
 
 #OPENCV
-#link_directories(/opt/ros/hydro/lib)
-#include_directories(/opt/ros/hydro/include)
-#include_directories(/opt/ros/hydro/include/opencv)
-#include_directories(/opt/ros/hydro/include/opencv2)
 
 link_directories(/opt/ros/indigo/lib)
 include_directories(/opt/ros/indigo/include)

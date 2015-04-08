@@ -111,6 +111,8 @@ void FrameInput::load_rgb(){
 		//printf("load rgb\n");
 		rgb_in_ram					= true;
 		rgb_img 					= cvLoadImage(rgb_path.c_str(),CV_LOAD_IMAGE_UNCHANGED);
+        width = rgb_img->width;
+        height = rgb_img->height;
 		rgb_last_use_timestamp		= current_time();
 	}
 }

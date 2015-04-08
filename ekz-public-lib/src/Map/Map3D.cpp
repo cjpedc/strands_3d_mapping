@@ -23,15 +23,26 @@ Map3D::Map3D(){
 	matcher 			= new AICK();					//The keypoint matcher to be used for sequential frames
 	loopclosure_matcher = new AICK();					//The keypoint matcher to be used for loopclosure
 	segmentation 		= new RGBDSegmentation();		//Base segmentation class, no segmentation to be used.
-	extractor 			= new SurfExtractor();			//Keypoint extractor, currently using Surf.
-	
+    extractor 			= new OrbExtractor();			//Keypoint extractor, currently using Orb.
+
+/*
+    calibration = new Calibration();				//Standard kinect parameters for the recorded pcd files
+    calibration->fx			= 525.0;				//Focal Length X
+    calibration->fy			= 525.0;				//Focal Length Y
+    calibration->cx			= 319.5;				//Center coordinate X
+    calibration->cy			= 239.5;				//Center coordinate X
+    calibration->ds			= 1;					//Depth scaling for camera
+    calibration->scale		= 5000;					//Depth scaling in file due to discretization.
+*/
+
 	calibration = new Calibration();				//Standard kinect parameters for the recorded pcd files
-	calibration->fx			= 525.0;				//Focal Length X
-	calibration->fy			= 525.0;				//Focal Length Y
-	calibration->cx			= 319.5;				//Center coordinate X
-	calibration->cy			= 239.5;				//Center coordinate X
+    calibration->fx			= 1081.37;				//Focal Length X
+    calibration->fy			= 1081.37;				//Focal Length Y
+    calibration->cx			= 959.5;				//Center coordinate X
+    calibration->cy			= 539.5;				//Center coordinate X
 	calibration->ds			= 1;					//Depth scaling for camera
-	calibration->scale		= 5000;					//Depth scaling in file due to discretization.
+    calibration->scale		= 5000;					//Depth scaling in file due to discretization.
+
 }
 
 Map3D::~Map3D(){}

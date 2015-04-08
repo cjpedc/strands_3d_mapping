@@ -42,6 +42,7 @@
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/TransformationFilter" />
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/core" />
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/mygeometry" />
+            <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/src/apps" />
             <Add directory="/opt/ros/indigo/include" />
             <Add directory="/opt/ros/indigo/include/opencv" />
             <Add directory="/opt/ros/indigo/include/opencv2" />
@@ -92,6 +93,7 @@
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/TransformationFilter" />
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/core" />
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/mygeometry" />
+            <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/src/apps" />
             <Add directory="/opt/ros/indigo/include" />
             <Add directory="/opt/ros/indigo/include/opencv" />
             <Add directory="/opt/ros/indigo/include/opencv2" />
@@ -142,6 +144,7 @@
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/TransformationFilter" />
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/core" />
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/mygeometry" />
+            <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/src/apps" />
             <Add directory="/opt/ros/indigo/include" />
             <Add directory="/opt/ros/indigo/include/opencv" />
             <Add directory="/opt/ros/indigo/include/opencv2" />
@@ -192,6 +195,7 @@
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/TransformationFilter" />
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/core" />
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/mygeometry" />
+            <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/src/apps" />
             <Add directory="/opt/ros/indigo/include" />
             <Add directory="/opt/ros/indigo/include/opencv" />
             <Add directory="/opt/ros/indigo/include/opencv2" />
@@ -242,6 +246,7 @@
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/TransformationFilter" />
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/core" />
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/mygeometry" />
+            <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/src/apps" />
             <Add directory="/opt/ros/indigo/include" />
             <Add directory="/opt/ros/indigo/include/opencv" />
             <Add directory="/opt/ros/indigo/include/opencv2" />
@@ -292,6 +297,7 @@
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/TransformationFilter" />
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/core" />
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/mygeometry" />
+            <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/src/apps" />
             <Add directory="/opt/ros/indigo/include" />
             <Add directory="/opt/ros/indigo/include/opencv" />
             <Add directory="/opt/ros/indigo/include/opencv2" />
@@ -342,6 +348,7 @@
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/TransformationFilter" />
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/core" />
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/mygeometry" />
+            <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/src/apps" />
             <Add directory="/opt/ros/indigo/include" />
             <Add directory="/opt/ros/indigo/include/opencv" />
             <Add directory="/opt/ros/indigo/include/opencv2" />
@@ -392,6 +399,7 @@
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/TransformationFilter" />
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/core" />
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/mygeometry" />
+            <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/src/apps" />
             <Add directory="/opt/ros/indigo/include" />
             <Add directory="/opt/ros/indigo/include/opencv" />
             <Add directory="/opt/ros/indigo/include/opencv2" />
@@ -442,6 +450,7 @@
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/TransformationFilter" />
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/core" />
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/mygeometry" />
+            <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/src/apps" />
             <Add directory="/opt/ros/indigo/include" />
             <Add directory="/opt/ros/indigo/include/opencv" />
             <Add directory="/opt/ros/indigo/include/opencv2" />
@@ -492,6 +501,7 @@
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/TransformationFilter" />
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/core" />
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/mygeometry" />
+            <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/src/apps" />
             <Add directory="/opt/ros/indigo/include" />
             <Add directory="/opt/ros/indigo/include/opencv" />
             <Add directory="/opt/ros/indigo/include/opencv2" />
@@ -642,6 +652,7 @@
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/TransformationFilter" />
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/core" />
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/mygeometry" />
+            <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/src/apps" />
             <Add directory="/opt/ros/indigo/include" />
             <Add directory="/opt/ros/indigo/include/opencv" />
             <Add directory="/opt/ros/indigo/include/opencv2" />
@@ -692,6 +703,7 @@
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/TransformationFilter" />
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/core" />
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/mygeometry" />
+            <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/src/apps" />
             <Add directory="/opt/ros/indigo/include" />
             <Add directory="/opt/ros/indigo/include/opencv" />
             <Add directory="/opt/ros/indigo/include/opencv2" />
@@ -767,6 +779,16 @@
             <DistClean command="/usr/bin/make -f &quot;/home/tmrcv1/catkin_ws/src/strands_3d_mapping/build-ekz-public-lib-Desktop-Default/Makefile&quot;  VERBOSE=1 clean" />
          </MakeCommands>
       </Target>
+      <Target title="edit_cache">
+         <Option working_dir="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/build-ekz-public-lib-Desktop-Default" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/tmrcv1/catkin_ws/src/strands_3d_mapping/build-ekz-public-lib-Desktop-Default/Makefile&quot;  VERBOSE=1 edit_cache" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/tmrcv1/catkin_ws/src/strands_3d_mapping/build-ekz-public-lib-Desktop-Default/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/tmrcv1/catkin_ws/src/strands_3d_mapping/build-ekz-public-lib-Desktop-Default/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/tmrcv1/catkin_ws/src/strands_3d_mapping/build-ekz-public-lib-Desktop-Default/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
       <Target title="example_bow_images">
          <Option output="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/build-ekz-public-lib-Desktop-Default/example_bow_images" prefix_auto="0" extension_auto="0" />
          <Option working_dir="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/build-ekz-public-lib-Desktop-Default/devel/lib/ekz_public_lib" />
@@ -792,6 +814,7 @@
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/TransformationFilter" />
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/core" />
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/mygeometry" />
+            <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/src/apps" />
             <Add directory="/opt/ros/indigo/include" />
             <Add directory="/opt/ros/indigo/include/opencv" />
             <Add directory="/opt/ros/indigo/include/opencv2" />
@@ -842,6 +865,7 @@
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/TransformationFilter" />
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/core" />
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/mygeometry" />
+            <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/src/apps" />
             <Add directory="/opt/ros/indigo/include" />
             <Add directory="/opt/ros/indigo/include/opencv" />
             <Add directory="/opt/ros/indigo/include/opencv2" />
@@ -892,6 +916,7 @@
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/TransformationFilter" />
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/core" />
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/mygeometry" />
+            <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/src/apps" />
             <Add directory="/opt/ros/indigo/include" />
             <Add directory="/opt/ros/indigo/include/opencv" />
             <Add directory="/opt/ros/indigo/include/opencv2" />
@@ -942,6 +967,7 @@
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/TransformationFilter" />
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/core" />
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/mygeometry" />
+            <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/src/apps" />
             <Add directory="/opt/ros/indigo/include" />
             <Add directory="/opt/ros/indigo/include/opencv" />
             <Add directory="/opt/ros/indigo/include/opencv2" />
@@ -992,6 +1018,7 @@
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/TransformationFilter" />
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/core" />
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/mygeometry" />
+            <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/src/apps" />
             <Add directory="/opt/ros/indigo/include" />
             <Add directory="/opt/ros/indigo/include/opencv" />
             <Add directory="/opt/ros/indigo/include/opencv2" />
@@ -1042,6 +1069,7 @@
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/TransformationFilter" />
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/core" />
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/mygeometry" />
+            <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/src/apps" />
             <Add directory="/opt/ros/indigo/include" />
             <Add directory="/opt/ros/indigo/include/opencv" />
             <Add directory="/opt/ros/indigo/include/opencv2" />
@@ -1092,6 +1120,7 @@
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/TransformationFilter" />
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/core" />
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/mygeometry" />
+            <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/src/apps" />
             <Add directory="/opt/ros/indigo/include" />
             <Add directory="/opt/ros/indigo/include/opencv" />
             <Add directory="/opt/ros/indigo/include/opencv2" />
@@ -1142,6 +1171,7 @@
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/TransformationFilter" />
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/core" />
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/mygeometry" />
+            <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/src/apps" />
             <Add directory="/opt/ros/indigo/include" />
             <Add directory="/opt/ros/indigo/include/opencv" />
             <Add directory="/opt/ros/indigo/include/opencv2" />
@@ -1192,6 +1222,7 @@
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/TransformationFilter" />
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/core" />
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/mygeometry" />
+            <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/src/apps" />
             <Add directory="/opt/ros/indigo/include" />
             <Add directory="/opt/ros/indigo/include/opencv" />
             <Add directory="/opt/ros/indigo/include/opencv2" />
@@ -1242,6 +1273,7 @@
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/TransformationFilter" />
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/core" />
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/mygeometry" />
+            <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/src/apps" />
             <Add directory="/opt/ros/indigo/include" />
             <Add directory="/opt/ros/indigo/include/opencv" />
             <Add directory="/opt/ros/indigo/include/opencv2" />
@@ -1292,6 +1324,7 @@
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/TransformationFilter" />
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/core" />
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/mygeometry" />
+            <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/src/apps" />
             <Add directory="/opt/ros/indigo/include" />
             <Add directory="/opt/ros/indigo/include/opencv" />
             <Add directory="/opt/ros/indigo/include/opencv2" />
@@ -1342,6 +1375,7 @@
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/TransformationFilter" />
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/core" />
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/mygeometry" />
+            <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/src/apps" />
             <Add directory="/opt/ros/indigo/include" />
             <Add directory="/opt/ros/indigo/include/opencv" />
             <Add directory="/opt/ros/indigo/include/opencv2" />
@@ -1392,6 +1426,7 @@
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/TransformationFilter" />
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/core" />
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/mygeometry" />
+            <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/src/apps" />
             <Add directory="/opt/ros/indigo/include" />
             <Add directory="/opt/ros/indigo/include/opencv" />
             <Add directory="/opt/ros/indigo/include/opencv2" />
@@ -1442,6 +1477,7 @@
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/TransformationFilter" />
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/core" />
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/mygeometry" />
+            <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/src/apps" />
             <Add directory="/opt/ros/indigo/include" />
             <Add directory="/opt/ros/indigo/include/opencv" />
             <Add directory="/opt/ros/indigo/include/opencv2" />
@@ -1522,6 +1558,7 @@
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/TransformationFilter" />
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/core" />
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/mygeometry" />
+            <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/src/apps" />
             <Add directory="/opt/ros/indigo/include" />
             <Add directory="/opt/ros/indigo/include/opencv" />
             <Add directory="/opt/ros/indigo/include/opencv2" />
@@ -1572,6 +1609,7 @@
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/TransformationFilter" />
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/core" />
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/mygeometry" />
+            <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/src/apps" />
             <Add directory="/opt/ros/indigo/include" />
             <Add directory="/opt/ros/indigo/include/opencv" />
             <Add directory="/opt/ros/indigo/include/opencv2" />
@@ -1662,6 +1700,7 @@
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/TransformationFilter" />
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/core" />
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/mygeometry" />
+            <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/src/apps" />
             <Add directory="/opt/ros/indigo/include" />
             <Add directory="/opt/ros/indigo/include/opencv" />
             <Add directory="/opt/ros/indigo/include/opencv2" />
@@ -1712,6 +1751,7 @@
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/TransformationFilter" />
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/core" />
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/mygeometry" />
+            <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/src/apps" />
             <Add directory="/opt/ros/indigo/include" />
             <Add directory="/opt/ros/indigo/include/opencv" />
             <Add directory="/opt/ros/indigo/include/opencv2" />
@@ -1762,6 +1802,7 @@
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/TransformationFilter" />
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/core" />
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/mygeometry" />
+            <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/src/apps" />
             <Add directory="/opt/ros/indigo/include" />
             <Add directory="/opt/ros/indigo/include/opencv" />
             <Add directory="/opt/ros/indigo/include/opencv2" />
@@ -1812,6 +1853,7 @@
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/TransformationFilter" />
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/core" />
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/mygeometry" />
+            <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/src/apps" />
             <Add directory="/opt/ros/indigo/include" />
             <Add directory="/opt/ros/indigo/include/opencv" />
             <Add directory="/opt/ros/indigo/include/opencv2" />
@@ -1892,6 +1934,7 @@
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/TransformationFilter" />
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/core" />
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/mygeometry" />
+            <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/src/apps" />
             <Add directory="/opt/ros/indigo/include" />
             <Add directory="/opt/ros/indigo/include/opencv" />
             <Add directory="/opt/ros/indigo/include/opencv2" />
@@ -1942,6 +1985,7 @@
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/TransformationFilter" />
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/core" />
             <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/mygeometry" />
+            <Add directory="/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/src/apps" />
             <Add directory="/opt/ros/indigo/include" />
             <Add directory="/opt/ros/indigo/include/opencv" />
             <Add directory="/opt/ros/indigo/include/opencv2" />

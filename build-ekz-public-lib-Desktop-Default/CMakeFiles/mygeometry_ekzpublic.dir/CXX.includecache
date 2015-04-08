@@ -6,59 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/FeatureDescriptor/FeatureDescriptor.h
-vector
--
-string
--
-stdio.h
--
-OrbFeatureDescriptor.h
-/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/FeatureDescriptor/OrbFeatureDescriptor.h
-SurfFeatureDescriptor64.h
-/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/FeatureDescriptor/SurfFeatureDescriptor64.h
-SurfFeatureDescriptor128.h
-/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/FeatureDescriptor/SurfFeatureDescriptor128.h
-
-/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/FeatureDescriptor/OrbFeatureDescriptor.h
-FeatureDescriptor.h
-/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/FeatureDescriptor/FeatureDescriptor.h
-
-/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/FeatureDescriptor/SurfFeatureDescriptor128.h
-FeatureDescriptor.h
-/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/FeatureDescriptor/FeatureDescriptor.h
-
-/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/FeatureDescriptor/SurfFeatureDescriptor64.h
-FeatureDescriptor.h
-/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/FeatureDescriptor/FeatureDescriptor.h
-
 /home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/mygeometry/HasDistance.h
-
-/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/mygeometry/KeyPoint.h
-FeatureDescriptor.h
-/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/mygeometry/FeatureDescriptor.h
-Eigen/Core
--
-algorithm
--
-vector
--
-Point.h
-/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/mygeometry/Point.h
-KeyPointChain.h
-/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/mygeometry/KeyPointChain.h
-
-/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/mygeometry/KeyPointChain.h
-KeyPoint.h
-/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/mygeometry/KeyPoint.h
-vector
--
-
-/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/mygeometry/KeyPointSet.h
-KeyPoint.h
-/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/mygeometry/KeyPoint.h
-vector
--
 
 /home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/mygeometry/Line.h
 pcl/visualization/cloud_viewer.h
@@ -124,30 +72,6 @@ vector
 Eigen/Core
 -
 
-/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/src/mygeometry/HasDistance.cpp
-HasDistance.h
-/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/src/mygeometry/HasDistance.h
-
-/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/src/mygeometry/KeyPoint.cpp
-KeyPoint.h
-/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/src/mygeometry/KeyPoint.h
-
-/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/src/mygeometry/KeyPointChain.cpp
-KeyPointChain.h
-/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/src/mygeometry/KeyPointChain.h
-algorithm
--
-vector
--
-
-/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/src/mygeometry/KeyPointSet.cpp
-KeyPointSet.h
-/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/src/mygeometry/KeyPointSet.h
-algorithm
--
-vector
--
-
 /home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/src/mygeometry/Line.cpp
 Line.h
 /home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/src/mygeometry/Line.h
@@ -179,10 +103,6 @@ algorithm
 -
 vector
 -
-
-/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/src/mygeometry/Point.cpp
-Point.h
-/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/src/mygeometry/Point.h
 
 /usr/include/eigen3/Eigen/Cholesky
 Core
@@ -1229,7 +1149,7 @@ vector
 -
 boost/shared_ptr.hpp
 -
-pcl/pcl_macros.h
+/usr/include/pcl-1.7/pcl/pcl_macros.h
 -
 ostream
 -
@@ -1241,7 +1161,7 @@ vector
 -
 ostream
 -
-pcl/PCLHeader.h
+/usr/include/pcl-1.7/pcl/PCLHeader.h
 -
 
 /usr/include/pcl-1.7/pcl/PCLPointCloud2.h
@@ -1253,9 +1173,9 @@ ostream
 -
 boost/detail/endian.hpp
 -
-pcl/PCLHeader.h
+/usr/include/pcl-1.7/pcl/PCLHeader.h
 -
-pcl/PCLPointField.h
+/usr/include/pcl-1.7/pcl/PCLPointField.h
 -
 
 /usr/include/pcl-1.7/pcl/PCLPointField.h
@@ -1267,7 +1187,7 @@ ostream
 -
 boost/shared_ptr.hpp
 -
-pcl/pcl_macros.h
+/usr/include/pcl-1.7/pcl/pcl_macros.h
 -
 
 /usr/include/pcl-1.7/pcl/PointIndices.h
@@ -1277,7 +1197,7 @@ vector
 -
 ostream
 -
-pcl/PCLHeader.h
+/usr/include/pcl-1.7/pcl/PCLHeader.h
 -
 
 /usr/include/pcl-1.7/pcl/PolygonMesh.h
@@ -1361,13 +1281,13 @@ pcl/point_types.h
 /usr/include/pcl-1.7/pcl/common/io.h
 string
 -
-pcl/pcl_base.h
+/usr/include/pcl-1.7/pcl/pcl_base.h
 -
-pcl/PointIndices.h
+/usr/include/pcl-1.7/pcl/PointIndices.h
 -
-pcl/conversions.h
+/usr/include/pcl-1.7/pcl/conversions.h
 -
-pcl/exceptions.h
+/usr/include/pcl-1.7/pcl/exceptions.h
 -
 locale
 -
@@ -1383,27 +1303,27 @@ stdio.h
 -
 stdarg.h
 -
-pcl/pcl_exports.h
+/usr/include/pcl-1.7/pcl/pcl_exports.h
 -
-pcl/pcl_config.h
+/usr/include/pcl-1.7/pcl/pcl_config.h
 -
 
 /usr/include/pcl-1.7/pcl/conversions.h
-pcl/PCLPointField.h
+/usr/include/pcl-1.7/pcl/PCLPointField.h
 -
-pcl/PCLPointCloud2.h
+/usr/include/pcl-1.7/pcl/PCLPointCloud2.h
 -
-pcl/PCLImage.h
+/usr/include/pcl-1.7/pcl/PCLImage.h
 -
-pcl/point_cloud.h
+/usr/include/pcl-1.7/pcl/point_cloud.h
 -
-pcl/point_traits.h
+/usr/include/pcl-1.7/pcl/point_traits.h
 -
-pcl/for_each_type.h
+/usr/include/pcl-1.7/pcl/for_each_type.h
 -
-pcl/exceptions.h
+/usr/include/pcl-1.7/pcl/exceptions.h
 -
-pcl/console/print.h
+/usr/include/pcl-1.7/pcl/console/print.h
 -
 boost/foreach.hpp
 -
@@ -1423,7 +1343,7 @@ stdexcept
 -
 sstream
 -
-pcl/pcl_macros.h
+/usr/include/pcl-1.7/pcl/pcl_macros.h
 -
 boost/current_function.hpp
 -
@@ -1475,23 +1395,23 @@ pcl/common/point_tests.h
 -
 
 /usr/include/pcl-1.7/pcl/io/io.h
-pcl/common/io.h
+/usr/include/pcl-1.7/pcl/common/io.h
 -
 
 /usr/include/pcl-1.7/pcl/pcl_base.h
-pcl/pcl_macros.h
+/usr/include/pcl-1.7/pcl/pcl_macros.h
 -
 boost/shared_ptr.hpp
 -
-Eigen/StdVector
+/usr/include/eigen3/Eigen/StdVector
 -
-Eigen/Core
+/usr/include/eigen3/Eigen/Core
 -
-pcl/point_cloud.h
+/usr/include/pcl-1.7/pcl/point_cloud.h
 -
-pcl/PointIndices.h
+/usr/include/pcl-1.7/pcl/PointIndices.h
 -
-pcl/PCLPointCloud2.h
+/usr/include/pcl-1.7/pcl/PCLPointCloud2.h
 -
 pcl/impl/pcl_base.hpp
 -
@@ -1501,7 +1421,7 @@ pcl/impl/pcl_base.hpp
 /usr/include/pcl-1.7/pcl/pcl_exports.h
 
 /usr/include/pcl-1.7/pcl/pcl_macros.h
-pcl/pcl_config.h
+/usr/include/pcl-1.7/pcl/pcl_config.h
 -
 boost/cstdint.hpp
 -
@@ -1527,21 +1447,21 @@ math.h
 -
 
 /usr/include/pcl-1.7/pcl/point_cloud.h
-Eigen/StdVector
+/usr/include/eigen3/Eigen/StdVector
 -
-Eigen/Geometry
+/usr/include/eigen3/Eigen/Geometry
 -
-pcl/PCLHeader.h
+/usr/include/pcl-1.7/pcl/PCLHeader.h
 -
-pcl/exceptions.h
+/usr/include/pcl-1.7/pcl/exceptions.h
 -
-pcl/point_traits.h
+/usr/include/pcl-1.7/pcl/point_traits.h
 -
 
 /usr/include/pcl-1.7/pcl/point_traits.h
-pcl/pcl_macros.h
-/usr/include/pcl-1.7/pcl/pcl/pcl_macros.h
-pcl/PCLPointField.h
+/usr/include/pcl-1.7/pcl/pcl_macros.h
+-
+/usr/include/pcl-1.7/pcl/PCLPointField.h
 -
 boost/type_traits/remove_all_extents.hpp
 -

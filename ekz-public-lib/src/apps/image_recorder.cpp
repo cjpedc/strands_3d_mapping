@@ -73,7 +73,8 @@ int main(int argc, char **argv)
 
 	ros::init(argc, argv, "ekz_record");
 	ros::NodeHandle n;
-	ros::Subscriber sub2 = n.subscribe ("/camera/depth_registered/points", 1, cloud_cb);
+	//ros::Subscriber sub2 = n.subscribe ("/camera/depth_registered/points", 1, cloud_cb);
+    ros::Subscriber sub2 = n.subscribe ("/kinect2/depth_highres/points", 1, cloud_cb);
 	ros::spin();
 	return 0;
 }

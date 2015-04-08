@@ -12,6 +12,7 @@ int main(int argc, char **argv){
 
 	vector< RGBDFrame * > frames;
 	for(int i = 25; i <= 95; i+=5){
+	//for(int i = 1; i <= 100; i++){
 		printf("adding a new frame\n");
 		
 		//Get paths to image files

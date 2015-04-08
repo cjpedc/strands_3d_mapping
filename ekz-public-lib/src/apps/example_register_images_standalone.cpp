@@ -7,12 +7,12 @@ int main(int argc, char **argv){
 	string input = argv[1];
 
 	Calibration * cal = new Calibration();
-	cal->fx			= 525.0;
-	cal->fy			= 525.0;
-	cal->cx			= 319.5;
-	cal->cy			= 239.5;
-	cal->ds			= 1;
-	cal->scale		= 5000;
+    cal->fx			= 1081.37;//525.0;				//Focal Length X
+    cal->fy			= 1081.37;//525.0;				//Focal Length Y
+    cal->cx			= 959.5;//319.5;				//Center coordinate X
+    cal->cy			= 539.5;//239.5;				//Center coordinate Y
+    cal->ds			= 1;                            //Depth scaling for camera
+    cal->scale		= 5000;                         //Depth scaling in file due to discretization.
 
 	FrameMatcher * matcher = new AICK();
 	RGBDSegmentation * seg = new RGBDSegmentation();

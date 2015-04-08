@@ -46,6 +46,7 @@ SET(CMAKE_C_TARGET_INCLUDE_PATH
   "/opt/ros/indigo/include/opencv2"
   "/usr/include/opencv2"
   "/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include"
+  "/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/src/apps"
   "/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/FeatureDescriptor"
   "/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/mygeometry"
   "/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/include/FeatureExtractor"

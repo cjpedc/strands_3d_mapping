@@ -25,17 +25,20 @@ int main(int argc, char **argv){
 	m->setMatcher(new BowAICK(max_points, nr_iter,shrinking,bow_threshold,distance_threshold,feature_threshold));//Create a new matcher
 
 	vector< RGBDFrame * > frames;
-	for(int i = 25; i <= 95; i+=5){
+    for(int i = 400; i <= 425; i+=1){
+    //for(int i = 1; i <=15 ; i+=1){
 		printf("----------------------%i-------------------\nadding a new frame\n",i);
-		
+
 		//Get paths to image files
 		char rgbbuf[512];
 		char depthbuf[512];
+
 		sprintf(rgbbuf,"%s/RGB%.10i.png",input.c_str(),i);
 		sprintf(depthbuf,"%s/Depth%.10i.png",input.c_str(),i);
 
 		//Add frame to map
 		m->addFrame(string(rgbbuf) , string(depthbuf));
+
 	}
 	
 	vector<Matrix4f> poses = m->estimate();	//Estimate poses for the frames using the map object.
@@ -46,5 +49,6 @@ int main(int argc, char **argv){
 	for(unsigned int i = 0; i < poses.size(); i++){
 		cout << poses.at(i) << endl << endl;
 	}
+
 	return 0;
 }
