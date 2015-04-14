@@ -26,7 +26,7 @@ class Calibration{
 	pthread_mutex_t viewer_mutex;
 	
 	void loadWord(string path){
-		printf("loadWord(%s)\n",path.c_str());
+        //printf("loadWord(%s)\n",path.c_str());
 		string type = path.substr(path.find_last_of(".")+1);
 		if(			type.compare("orb")  == 0){		//orb type feature
 			words.push_back(new OrbFeatureDescriptor(path));

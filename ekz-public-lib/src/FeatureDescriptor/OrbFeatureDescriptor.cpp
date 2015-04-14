@@ -17,7 +17,7 @@ OrbFeatureDescriptor::OrbFeatureDescriptor(){
 
 OrbFeatureDescriptor::OrbFeatureDescriptor(string path){
 	type = orb;
-	cout<< "loading orb: " << path << endl;
+    //cout<< "loading orb: " << path << endl;
 	ifstream file (path.c_str());
 	if (file.is_open()){
 		file.seekg(0,ifstream::end);
@@ -29,7 +29,7 @@ OrbFeatureDescriptor::OrbFeatureDescriptor(string path){
 		file.close();
 		descriptor = (int *) buffer_char;
 	}else{cout<<"File not opened"<<endl;}
-	print();
+    //print();
 };
 
 OrbFeatureDescriptor::~OrbFeatureDescriptor(){
