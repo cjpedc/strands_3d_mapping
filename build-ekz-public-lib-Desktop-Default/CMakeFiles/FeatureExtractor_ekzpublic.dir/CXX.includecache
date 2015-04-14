@@ -134,6 +134,10 @@ vector
 Eigen/Core
 -
 
+/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/src/FeatureExtractor/FeatureExtractor.cpp
+FeatureExtractor.h
+/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/src/FeatureExtractor/FeatureExtractor.h
+
 /home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/src/FeatureExtractor/OrbExtractor.cpp
 OrbExtractor.h
 /home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/src/FeatureExtractor/OrbExtractor.h
@@ -148,6 +152,24 @@ cv.h
 highgui.h
 /home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/src/FeatureExtractor/highgui.h
 opencv.hpp
+-
+
+/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/src/FeatureExtractor/SurfExtractor.cpp
+SurfExtractor.h
+/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/src/FeatureExtractor/SurfExtractor.h
+SurfFeatureDescriptor128.h
+/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/src/FeatureExtractor/SurfFeatureDescriptor128.h
+ctime
+-
+algorithm
+-
+cv.h
+/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/src/FeatureExtractor/cv.h
+highgui.h
+/home/tmrcv1/catkin_ws/src/strands_3d_mapping/ekz-public-lib/src/FeatureExtractor/highgui.h
+opencv.hpp
+-
+opencv2/core/core.hpp
 -
 
 /usr/include/eigen3/Eigen/Cholesky
