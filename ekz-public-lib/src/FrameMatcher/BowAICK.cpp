@@ -134,7 +134,7 @@ Transformation * BowAICK::getTransformation(RGBDFrame * src, RGBDFrame * dst)
 		char * data = (char *)img_combine->imageData;
 		for (int j = 0; j < height; j++){
 			for (int i = 0; i < width; i++){
-				int ind = 3*(640*j+i);
+                int ind = 3*(1920*j+i);
 				data[3 * (j * (2*width) + (width+i)) + 0] = data_dst[ind +0];
 				data[3 * (j * (2*width) + (width+i)) + 1] = data_dst[ind +1];
 				data[3 * (j * (2*width) + (width+i)) + 2] = data_dst[ind +2];

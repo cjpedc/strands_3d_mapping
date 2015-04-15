@@ -76,6 +76,9 @@ class Map3D
 	
 	virtual void addFrame(FrameInput * fi);
 	virtual void addFrame(RGBDFrame * frame);
+    virtual void removeLastFrame();
+    virtual int numberFrames();
+    virtual int numberOfMatchesInLastFrame();
 	
 	virtual void addTransformation(Transformation * transformation);
 

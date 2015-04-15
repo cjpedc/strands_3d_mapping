@@ -52,8 +52,8 @@ FrameInput::FrameInput(Calibration * cal, string rgbpath, string depthpath){
 	//printf("rgbpath: %s\n",rgbpath.c_str());
 	//printf("depthpath: %s\n",depthpath.c_str());
 
-	width = 640;
-	height = 480;
+    width = 1920;//640;
+    height = 1080;//480;
 
 	rgb_path		= rgbpath;
 	depth_path		= depthpath;

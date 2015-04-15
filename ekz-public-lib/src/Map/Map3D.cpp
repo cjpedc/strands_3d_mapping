@@ -58,6 +58,19 @@ void Map3D::addFrame(RGBDFrame * frame){
 	frames.push_back(frame);
 }
 
+void Map3D::removeLastFrame() {
+    frames.pop_back();
+    transformations.pop_back();
+}
+
+int Map3D::numberFrames() {
+    return frames.size();
+}
+
+int Map3D::numberOfMatchesInLastFrame() {
+    return transformations.at(transformations.size()-1)->weight;
+}
+
 void Map3D::setVerbose(bool v){
 	verbose = v;
 	matcher->verbose = verbose;
@@ -112,7 +125,8 @@ vector<Matrix4f> Map3D::NEWestimate(){
     poses.push_back(Matrix4f::Identity());
     matcher->debugg = true;
 
-    for(unsigned int i = (transformations.size()-2); i < transformations.size(); i++){
+    for(unsigned int i = (transformations.size()-1); i < transformations.size(); i++){
+        printf("Transformations size = %i \n", i);
         if(verbose){printf("Frame:%i ---------> %i : %f\n",transformations.at(i)->src->id,transformations.at(i)->dst->id,transformations.at(i)->weight);}
         //cout << transformations.at(i)->transformationMatrix << endl;
         poses.push_back(poses.back()*transformations.at(i)->transformationMatrix);
@@ -125,12 +139,11 @@ vector<Matrix4f> Map3D::estimateCurrentPose(vector<Matrix4f> lastPose){
     newPose = lastPose;
     matcher->debugg = true;
     unsigned int i = (transformations.size()-1);
+    printf("Transformations size = %i \n", i);
     if(verbose){printf("Frame:%i ---------> %i : %f\n",transformations.at(i)->src->id,transformations.at(i)->dst->id,transformations.at(i)->weight);}
     //cout << transformations.at(i)->transformationMatrix << endl;
     newPose.insert(newPose.begin(),newPose.back()*transformations.at(i)->transformationMatrix);
     newPose.pop_back();
-    printf("HOLA3\n");
-
     return newPose;
 }
 
