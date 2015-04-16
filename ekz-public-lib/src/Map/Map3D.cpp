@@ -50,7 +50,7 @@ void Map3D::addFrame(string rgb_path, string depth_path){								addFrame(calibr
 void Map3D::addFrame(Calibration * cal,string rgb_path, string depth_path){				addFrame(new FrameInput(cal,rgb_path,depth_path));}
 
 void Map3D::addFrame(pcl::PointCloud<pcl::PointXYZRGB>::Ptr cloud){						addFrame(calibration,cloud);}
-void Map3D::addFrame(Calibration * cal, pcl::PointCloud<pcl::PointXYZRGB>::Ptr cloud){	addFrame(new FrameInput(cal, *cloud,false, frames.size(), "./"));}
+void Map3D::addFrame(Calibration * cal, pcl::PointCloud<pcl::PointXYZRGB>::Ptr cloud){	addFrame(new FrameInput(cal, *cloud,true, frames.size(), "/home/tmrcv1/Desktop/images_test"));}
 
 void Map3D::addFrame(FrameInput * fi) {													addFrame(new RGBDFrame(fi,extractor,segmentation,verbose));}
 void Map3D::addFrame(RGBDFrame * frame){
@@ -61,6 +61,7 @@ void Map3D::addFrame(RGBDFrame * frame){
 void Map3D::removeLastFrame() {
     frames.pop_back();
     transformations.pop_back();
+    //poses.pop_back();
 }
 
 int Map3D::numberFrames() {
@@ -126,7 +127,7 @@ vector<Matrix4f> Map3D::NEWestimate(){
     matcher->debugg = true;
 
     for(unsigned int i = (transformations.size()-1); i < transformations.size(); i++){
-        printf("Transformations size = %i \n", i);
+        //printf("Transformations size = %i \n", i);
         if(verbose){printf("Frame:%i ---------> %i : %f\n",transformations.at(i)->src->id,transformations.at(i)->dst->id,transformations.at(i)->weight);}
         //cout << transformations.at(i)->transformationMatrix << endl;
         poses.push_back(poses.back()*transformations.at(i)->transformationMatrix);
@@ -144,6 +145,7 @@ vector<Matrix4f> Map3D::estimateCurrentPose(vector<Matrix4f> lastPose){
     //cout << transformations.at(i)->transformationMatrix << endl;
     newPose.insert(newPose.begin(),newPose.back()*transformations.at(i)->transformationMatrix);
     newPose.pop_back();
+    poses = newPose;
     return newPose;
 }
 

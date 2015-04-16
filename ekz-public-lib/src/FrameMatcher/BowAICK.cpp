@@ -2,7 +2,7 @@
 #include <vector>
 
 using namespace std;
-const bool debugg_BowAICK = false;
+const bool debugg_BowAICK = true;
 
 BowAICK::BowAICK()
 {
@@ -120,6 +120,7 @@ Transformation * BowAICK::getTransformation(RGBDFrame * src, RGBDFrame * dst)
 	transformation->weight = 100;
 
 	if(debugg_BowAICK){printf("BowAICK::getTransformation(%i,%i)\n",src->id,dst->id);}
+
 	IplImage* img_combine;
 	int width;
 	int height;
@@ -134,17 +135,21 @@ Transformation * BowAICK::getTransformation(RGBDFrame * src, RGBDFrame * dst)
 		char * data = (char *)img_combine->imageData;
 		for (int j = 0; j < height; j++){
 			for (int i = 0; i < width; i++){
-                int ind = 3*(1920*j+i);
+                int ind = 3*(width*j+i);
 				data[3 * (j * (2*width) + (width+i)) + 0] = data_dst[ind +0];
 				data[3 * (j * (2*width) + (width+i)) + 1] = data_dst[ind +1];
 				data[3 * (j * (2*width) + (width+i)) + 2] = data_dst[ind +2];
-				data[3 * (j * (2*width) + (i)) + 0] = data_src[ind +2];
-				data[3 * (j * (2*width) + (i)) + 1] = data_src[ind +2];
+                data[3 * (j * (2*width) + (i)) + 0] = data_src[ind +0];
+                data[3 * (j * (2*width) + (i)) + 1] = data_src[ind +1];
 				data[3 * (j * (2*width) + (i)) + 2] = data_src[ind +2];
 			}
 		}
+
 		cvReleaseImage( &rgb_img_src );
 		cvReleaseImage( &rgb_img_dst );
+
+        cvShowImage("combined image", img_combine);
+        cvWaitKey(0);
 	}
 	
 	int nr_loop_src = src->keypoints->valid_key_points.size();
@@ -235,7 +240,7 @@ Transformation * BowAICK::getTransformation(RGBDFrame * src, RGBDFrame * dst)
 	float alpha = getAlpha(999999999,0);
 	int iter = 0;
 	for(; iter < nr_iter; iter++){
-		//printf("alpha= %f\n",alpha);
+        printf("alpha= %f\n",alpha);
 		pcl::TransformationFromCorrespondences tfc;
 		float threshold = distance_threshold*alpha + (1 - alpha)*feature_threshold;
 		transformation->weight = 0;
@@ -315,7 +320,7 @@ Transformation * BowAICK::getTransformation(RGBDFrame * src, RGBDFrame * dst)
 		//sleep(1);	
 		if(alpha >= converge && converged(change,1e-4,1e-5)){
 			transformation->weight = inlier_src_kp.size();
-			//printf("-------------------------BREAK----------------------\n");
+            printf("-------------------------BREAK----------------------\n");
 			break;
 		}
 		
@@ -361,7 +366,7 @@ Transformation * BowAICK::getTransformation(RGBDFrame * src, RGBDFrame * dst)
 			printf("%i -> fit: %f\n",iter,fit);
 			transformation->printError();
 			printf("weight: %f\n",float(wei));
-			//if(iter == nr_iter-1 && transformation->weight < 50)
+           // if(iter == nr_iter-1 && transformation->weight < 50)
 			{
 				cvShowImage("combined image", img_combine_clone);
 				cvWaitKey(0);
@@ -392,5 +397,6 @@ Transformation * BowAICK::getTransformation(RGBDFrame * src, RGBDFrame * dst)
 	//transformation->print();
 	//if(transformation->weight > 5){printf("BowAICK cost: %f, weight: %f\n",time,transformation->weight);}
 	transformation->time = time;
+
 	return transformation;
 }
