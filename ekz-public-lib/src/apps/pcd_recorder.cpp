@@ -32,10 +32,14 @@ void  cloud_cb(const sensor_msgs::PointCloud2ConstPtr& input){
 	pcl::PointCloud<pcl::PointXYZRGB> input_cloud;
 	pcl::fromROSMsg (*input, input_cloud);
 
+
 	char buf[1024];
 	sprintf(buf,"%s%.10i.pcd",path.c_str(),counter);
 	pcl::io::savePCDFileBinary (string(buf), input_cloud);
-	
+
+    //char str [80];
+    //printf ("Next");
+    //scanf ("%79s",str);
 }
 
 
@@ -50,7 +54,8 @@ int main(int argc, char **argv)
 
 	ros::init(argc, argv, "ekz_record");
 	ros::NodeHandle n;
-	ros::Subscriber sub2 = n.subscribe ("/camera/depth_registered/points", 1, cloud_cb);
+    //ros::Subscriber sub2 = n.subscribe ("/camera/depth_registered/points", 1, cloud_cb);
+    ros::Subscriber sub2 = n.subscribe ("/kinect2/depth_highres/points", 1, cloud_cb);
 	ros::spin();
 	return 0;
 }

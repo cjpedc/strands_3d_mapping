@@ -50,7 +50,7 @@ void Map3D::addFrame(string rgb_path, string depth_path){								addFrame(calibr
 void Map3D::addFrame(Calibration * cal,string rgb_path, string depth_path){				addFrame(new FrameInput(cal,rgb_path,depth_path));}
 
 void Map3D::addFrame(pcl::PointCloud<pcl::PointXYZRGB>::Ptr cloud){						addFrame(calibration,cloud);}
-void Map3D::addFrame(Calibration * cal, pcl::PointCloud<pcl::PointXYZRGB>::Ptr cloud){	addFrame(new FrameInput(cal, *cloud,true, frames.size(), "/home/tmrcv1/Desktop/images_test"));}
+void Map3D::addFrame(Calibration * cal, pcl::PointCloud<pcl::PointXYZRGB>::Ptr cloud){	addFrame(new FrameInput(cal, *cloud,false, frames.size(), "/home/tmrcv1/Desktop/images_test"));}
 
 void Map3D::addFrame(FrameInput * fi) {													addFrame(new RGBDFrame(fi,extractor,segmentation,verbose));}
 void Map3D::addFrame(RGBDFrame * frame){
