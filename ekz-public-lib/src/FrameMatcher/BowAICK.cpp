@@ -119,14 +119,15 @@ Transformation * BowAICK::getTransformation(RGBDFrame * src, RGBDFrame * dst)
 	transformation->dst = dst;
 	transformation->weight = 100;
 
-	if(debugg_BowAICK){printf("BowAICK::getTransformation(%i,%i)\n",src->id,dst->id);}
+    if(debugg_BowAICK){printf("BowAICK::getTransformation(%i,%i)\n",src->id,dst->id);}
 
 	IplImage* img_combine;
 	int width;
 	int height;
-	if(debugg_BowAICK){
+    if(debugg_BowAICK){
 		IplImage* rgb_img_src 	= cvLoadImage(src->input->rgb_path.c_str(),CV_LOAD_IMAGE_UNCHANGED);
 		char * data_src = (char *)rgb_img_src->imageData;
+        //printf("hello\n");
 		IplImage* rgb_img_dst 	= cvLoadImage(dst->input->rgb_path.c_str(),CV_LOAD_IMAGE_UNCHANGED);
 		char * data_dst = (char *)rgb_img_dst->imageData;
 		width = rgb_img_src->width;
@@ -239,8 +240,8 @@ Transformation * BowAICK::getTransformation(RGBDFrame * src, RGBDFrame * dst)
 	}
 	float alpha = getAlpha(999999999,0);
 	int iter = 0;
-	for(; iter < nr_iter; iter++){
-        printf("alpha= %f\n",alpha);
+    for(; iter < nr_iter; iter++){
+        //printf("alpha= %f\n",alpha);
 		pcl::TransformationFromCorrespondences tfc;
 		float threshold = distance_threshold*alpha + (1 - alpha)*feature_threshold;
 		transformation->weight = 0;
@@ -260,7 +261,7 @@ Transformation * BowAICK::getTransformation(RGBDFrame * src, RGBDFrame * dst)
 		float mat23 = transformationMat(2,3);
 		
 		IplImage * img_combine_clone;
-		if(debugg_BowAICK){
+        if(debugg_BowAICK){
 			img_combine_clone = cvCreateImage(cvSize(img_combine->width, img_combine->height), IPL_DEPTH_8U, 3);
 			cvCopy( img_combine, img_combine_clone, NULL );
 		}
@@ -366,11 +367,12 @@ Transformation * BowAICK::getTransformation(RGBDFrame * src, RGBDFrame * dst)
 			printf("%i -> fit: %f\n",iter,fit);
 			transformation->printError();
 			printf("weight: %f\n",float(wei));
-           // if(iter == nr_iter-1 && transformation->weight < 50)
-			{
+            //if(iter == nr_iter-1 && transformation->weight < 50)
+            if(iter == nr_iter-1)
+            {
 				cvShowImage("combined image", img_combine_clone);
-				cvWaitKey(0);
-			}
+                cvWaitKey(0);
+            }
 			cvReleaseImage( &img_combine_clone);
 		}
 	}

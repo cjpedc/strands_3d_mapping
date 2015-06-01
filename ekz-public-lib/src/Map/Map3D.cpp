@@ -34,13 +34,24 @@ Map3D::Map3D(){
     calibration->ds			= 1;					//Depth scaling for camera
     calibration->scale		= 5000;					//Depth scaling in file due to discretization.
 */
-
+/*
 	calibration = new Calibration();				//Standard kinect parameters for the recorded pcd files
     calibration->fx			= 1081.37;				//Focal Length X
     calibration->fy			= 1081.37;				//Focal Length Y
     calibration->cx			= 959.5;				//Center coordinate X
     calibration->cy			= 539.5;				//Center coordinate X
 	calibration->ds			= 1;					//Depth scaling for camera
+    calibration->scale		= 5000;					//Depth scaling in file due to discretization.
+*/
+
+    //width: 960
+    //height 540
+    calibration = new Calibration();				//Standard kinect parameters for the recorded pcd files
+    calibration->fx			= 1081.37/2;				//Focal Length X
+    calibration->fy			= 1081.37/2;				//Focal Length Y
+    calibration->cx			= (960.0-1.0)/2;				//Center coordinate X
+    calibration->cy			= (540.0-1.0)/2;				//Center coordinate X
+    calibration->ds			= 1;					//Depth scaling for camera
     calibration->scale		= 5000;					//Depth scaling in file due to discretization.
 
 }
@@ -54,7 +65,8 @@ void Map3D::addFrame(Calibration * cal, pcl::PointCloud<pcl::PointXYZRGB>::Ptr c
 
 void Map3D::addFrame(FrameInput * fi) {													addFrame(new RGBDFrame(fi,extractor,segmentation,verbose));}
 void Map3D::addFrame(RGBDFrame * frame){
-	if(frames.size() > 0){transformations.push_back(matcher->getTransformation(frame, frames.back()));}
+    if(frames.size() > 0){transformations.push_back(matcher->getTransformation(frame, frames.back()));}
+    //if(frames.size() > 0){transformations.push_back(matcher->getTransformation(frame, frames.front()));}
 	frames.push_back(frame);
 }
 
@@ -149,7 +161,7 @@ vector<Matrix4f> Map3D::estimateCurrentPose(vector<Matrix4f> lastPose){
     return newPose;
 }
 
-void Map3D::savePCD(string path){savePCD(path,false, false, 0.01);}
+void Map3D::savePCD(string path){savePCD(path,false, true, 0.012);}
 void Map3D::savePCD(string path,bool randomcolor, bool trajectory, float resolution){
 	if(verbose){printf("Saving map in: %s\n",path.c_str());}
 	getLargestComponent();
@@ -189,6 +201,13 @@ void Map3D::savePCD(string path,bool randomcolor, bool trajectory, float resolut
 				cloud2->points[nr_pts].r = c.points[j].r;
 				cloud2->points[nr_pts].g = c.points[j].g;
 				cloud2->points[nr_pts].b = c.points[j].b;
+
+//                if(c.points[j].x < 0){
+//                    cloud2->points[nr_pts].r = 255;
+//                    cloud2->points[nr_pts].g = 0;
+//                    cloud2->points[nr_pts].b = 255;
+//                }
+
 				if(randomcolor){
 					cloud2->points[nr_pts].r = tmp_r;
 					cloud2->points[nr_pts].g = tmp_g;

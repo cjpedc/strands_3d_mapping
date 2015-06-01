@@ -3,7 +3,7 @@
 #include <pcl/visualization/cloud_viewer.h>
 
 using namespace std;
-const bool debugg_AICK = false;
+const bool debugg_AICK = true;
 
 AICK::AICK()
 {
@@ -60,7 +60,7 @@ Transformation * AICK::getTransformation(RGBDFrame * src, RGBDFrame * dst)
 	IplImage* img_combine;
 	int width;
 	int height;
-	if(debugg_AICK)
+    if(debugg_AICK)
 	{	
 		IplImage* rgb_img_src 	= cvLoadImage(src->input->rgb_path.c_str(),CV_LOAD_IMAGE_UNCHANGED);
 		char * data_src = (char *)rgb_img_src->imageData;
@@ -130,7 +130,7 @@ Transformation * AICK::getTransformation(RGBDFrame * src, RGBDFrame * dst)
 		}
 	}
 	//printf("src_keypoints.size() = %i, dst_keypoints.size() = %i\n",int(src_keypoints.size()),int(dst_keypoints.size()));
-	//if(debugg_AICK){printf("src_keypoints.size() = %i, dst_keypoints.size() = %i\n",int(src_keypoints.size()),int(dst_keypoints.size()));}
+    //if(debugg_AICK){printf("src_keypoints.size() = %i, dst_keypoints.size() = %i\n",int(src_keypoints.size()),int(dst_keypoints.size()));}
 	int src_nr_points = src_keypoints.size();
 	int dst_nr_points = dst_keypoints.size();
 	float ** surf_distances = new float*[src_nr_points];
@@ -276,7 +276,7 @@ Transformation * AICK::getTransformation(RGBDFrame * src, RGBDFrame * dst)
 		}		
 		//printf("nr_matches: %i\n",nr_matches);
 		if(debugg_AICK ){
-			//if(iter == nr_iter-1)
+            if(iter == nr_iter-1)
 			{
 				cvShowImage("combined image", img_combine_clone);
 				char buf[1024];

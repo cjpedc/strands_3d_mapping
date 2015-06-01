@@ -147,12 +147,15 @@ IplImage * Transformation::getMatchImg(){
 		for (int i = 0; i < width; i++){
             //int ind = 3*(640*j+i);
             int ind = 3*(1920*j+i);
+            //int ind = 3*(512*j+i);
 			int dst_ind = 3 * (j * (2*width) + (width+i));
 			int src_ind = 3 * (j * (2*width) + (i));
             //int d_dst = depth_data_dst[(640*j+i)];
             //int d_src = depth_data_src[(640*j+i)];
             int d_dst = depth_data_dst[(1920*j+i)];
             int d_src = depth_data_src[(1920*j+i)];
+            //int d_dst = depth_data_dst[(512*j+i)];
+            //int d_src = depth_data_src[(512*j+i)];
 			if(d_dst == 0 && (i % 2 == 0) && (j % 2 == 0)){
 				data[dst_ind + 0] = 255;
 				data[dst_ind + 1] = 0;
@@ -225,12 +228,15 @@ void Transformation::saveProblem(string path){
 		for (int i = 0; i < width; i++){
             //int ind = 3*(640*j+i);
             int ind = 3*(1920*j+i);
+            //int ind = 3*(512*j+i);
 			int dst_ind = 3 * (j * (2*width) + (width+i));
 			int src_ind = 3 * (j * (2*width) + (i));
             //int d_dst = depth_data_dst[(640*j+i)];
             //int d_src = depth_data_src[(640*j+i)];
             int d_dst = depth_data_dst[(1920*j+i)];
             int d_src = depth_data_src[(1920*j+i)];
+            //int d_dst = depth_data_dst[(512*j+i)];
+            //int d_src = depth_data_src[(512*j+i)];
 			if(d_dst == 0 && (i % 2 == 0) && (j % 2 == 0)){
 				data[dst_ind + 0] = 255;
 				data[dst_ind + 1] = 0;

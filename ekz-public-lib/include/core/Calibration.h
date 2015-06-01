@@ -46,5 +46,9 @@ class Calibration{
 			loadWord(string(buf));
 		}
 	}
+
+	void print(){
+		printf("CALIBRATION: fx: %f fy: %f cx: %f cy: %f\n",fx,fy,cx,cy);
+	}
 };
 #endif

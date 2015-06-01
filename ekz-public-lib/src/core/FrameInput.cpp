@@ -501,10 +501,16 @@ pcl::PointCloud<pcl::PointXYZRGB> FrameInput::getCloud(){
 	float d_scaleing	= calibration->ds/calibration->scale;
 	float centerX		= calibration->cx;
 	float centerY		= calibration->cy;
+
+//    printf("centerX: %f ",centerX);
+//    printf("centerY: %f\n",centerY);
 	float invFocalX		= 1.0f/calibration->fx;
     float invFocalY		= 1.0f/calibration->fy;
 	unsigned short * depth_data	= (unsigned short *)depth_img->imageData;
 	char * rgb_data				= (char *)(rgb_img->imageData);
+
+//    printf("width: %i\n",width);
+//    printf("height %i\n",height);
 
 	for(int w = 0; w < width; w++){
 		for(int h = 0; h < height; h++){
@@ -526,6 +532,10 @@ pcl::PointCloud<pcl::PointXYZRGB> FrameInput::getCloud(){
 				tmp_x = (w - centerX) * tmp_z * invFocalX;
 			   	tmp_y = (h - centerY) * tmp_z * invFocalY;
 			}
+
+            if(h == 1080/2){
+                printf("%i -> %f\n",w,tmp_x);
+            }
 			cloud.points[ind].x = tmp_x;
 			cloud.points[ind].y = tmp_y;
 			cloud.points[ind].z = tmp_z;

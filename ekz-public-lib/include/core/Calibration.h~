@@ -7,7 +7,7 @@
 
 #include <boost/thread/thread.hpp>
 #include <pcl/common/common_headers.h>
-#include <pcl/features/normal_3d.h>
+//#include <pcl/features/normal_3d.h>
 #include <pcl/io/pcd_io.h>
 #include <pcl/visualization/pcl_visualizer.h>
 #include <pcl/console/parse.h>
@@ -26,7 +26,7 @@ class Calibration{
 	pthread_mutex_t viewer_mutex;
 	
 	void loadWord(string path){
-		printf("loadWord(%s)\n",path.c_str());
+        //printf("loadWord(%s)\n",path.c_str());
 		string type = path.substr(path.find_last_of(".")+1);
 		if(			type.compare("orb")  == 0){		//orb type feature
 			words.push_back(new OrbFeatureDescriptor(path));
@@ -45,6 +45,10 @@ class Calibration{
 			sprintf(buf,"%s_%i.%s",path.c_str(),i,type.c_str());
 			loadWord(string(buf));
 		}
+	}
+
+	void print(){
+		printf("CALIBRATION: fx: %f fy: %f cx: %f cy: %f\n",fx,fy,cx,cy);
 	}
 };
 #endif

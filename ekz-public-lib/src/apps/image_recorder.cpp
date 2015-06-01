@@ -53,6 +53,12 @@ void  cloud_cb(const sensor_msgs::PointCloud2ConstPtr& input){
 
 	char buf[1024];
 
+	printf("WARNING RERWOTE RECORDER \n--ekz\n");
+    printf("middle depth: %f\n",input_cloud.points[height/2*input_cloud.width + width/2].z);
+    //    cvShowImage("rgb_img"  , rgb_img);
+    //cvShowImage("depth_img", depth_img);
+    //    cvWaitKey(30);
+
 	sprintf(buf,"%s/RGB%.10i.png",path.c_str(),counter);
 	if(!cvSaveImage(buf,rgb_img)){printf("Could not save: %s\n",buf);}
 	cvReleaseImage( &rgb_img);
@@ -74,7 +80,7 @@ int main(int argc, char **argv)
 	ros::init(argc, argv, "ekz_record");
 	ros::NodeHandle n;
 	//ros::Subscriber sub2 = n.subscribe ("/camera/depth_registered/points", 1, cloud_cb);
-    ros::Subscriber sub2 = n.subscribe ("/kinect2/depth_highres/points", 1, cloud_cb);
+    ros::Subscriber sub2 = n.subscribe ("/kinect2/depth_lowres/points", 1, cloud_cb);
 	ros::spin();
 	return 0;
 }
