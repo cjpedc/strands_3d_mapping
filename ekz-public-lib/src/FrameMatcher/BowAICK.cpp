@@ -88,7 +88,7 @@ bool converged(Matrix4f change, float trans_min, float rot_min){
 float BowAICK::getAlpha(int iteration){return 1-pow(shrinking,float(iteration));}
 
 float BowAICK::getAlpha(float avg_d2, int iteration){
-	float a = pow(shrinking,float(iteration));
+    float a = 1*pow(shrinking,float(iteration));
 
 	float part = fitness_constant*avg_d2/distance_threshold;
 	if(part > 1){part = 1;}
@@ -150,7 +150,7 @@ Transformation * BowAICK::getTransformation(RGBDFrame * src, RGBDFrame * dst)
 		cvReleaseImage( &rgb_img_dst );
 
         cvShowImage("combined image", img_combine);
-        cvWaitKey(0);
+        cvWaitKey(5);
 	}
 	
 	int nr_loop_src = src->keypoints->valid_key_points.size();
@@ -371,7 +371,7 @@ Transformation * BowAICK::getTransformation(RGBDFrame * src, RGBDFrame * dst)
             if(iter == nr_iter-1)
             {
 				cvShowImage("combined image", img_combine_clone);
-                cvWaitKey(0);
+                cvWaitKey(5);
             }
 			cvReleaseImage( &img_combine_clone);
 		}

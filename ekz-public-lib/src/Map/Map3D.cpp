@@ -1,5 +1,6 @@
 #include "Map3D.h"
 #include <map>
+#include <pcl/filters/crop_box.h>
 using namespace std;
 
 bool comparison_Map3D (Transformation * i,Transformation * j) {
@@ -35,6 +36,7 @@ Map3D::Map3D(){
     calibration->scale		= 5000;					//Depth scaling in file due to discretization.
 */
 /*
+    //Calibration parameters for Kinect2 high-resolution
 	calibration = new Calibration();				//Standard kinect parameters for the recorded pcd files
     calibration->fx			= 1081.37;				//Focal Length X
     calibration->fy			= 1081.37;				//Focal Length Y
@@ -44,13 +46,12 @@ Map3D::Map3D(){
     calibration->scale		= 5000;					//Depth scaling in file due to discretization.
 */
 
-    //width: 960
-    //height 540
+    //Calibration parameters for Kinect2 low-resolution
     calibration = new Calibration();				//Standard kinect parameters for the recorded pcd files
-    calibration->fx			= 1081.37/2;				//Focal Length X
-    calibration->fy			= 1081.37/2;				//Focal Length Y
-    calibration->cx			= (960.0-1.0)/2;				//Center coordinate X
-    calibration->cy			= (540.0-1.0)/2;				//Center coordinate X
+    calibration->fx			= 1081.37/2;			//Focal Length X
+    calibration->fy			= 1081.37/2;			//Focal Length Y
+    calibration->cx			= (960.0-1.0)/2;	    //Center coordinate X
+    calibration->cy			= (540.0-1.0)/2;		//Center coordinate X
     calibration->ds			= 1;					//Depth scaling for camera
     calibration->scale		= 5000;					//Depth scaling in file due to discretization.
 
@@ -168,13 +169,12 @@ void Map3D::savePCD(string path,bool randomcolor, bool trajectory, float resolut
 
 	pcl::VoxelGrid<pcl::PointXYZRGB> sor;
 	sor.setLeafSize (resolution, resolution, resolution);
-
 	
 	pcl::PointCloud<pcl::PointXYZRGB>::Ptr cloud(new pcl::PointCloud<pcl::PointXYZRGB>);
 	if(verbose){printf("nr frames: %i \n nr poses: %i\n",(int)frames.size(),(int)poses.size());}
 	for(unsigned int i = 0; i < largest_component.size(); i+=1){
 		//printf("largest_component.at(%i)=%i,frames.at(largest_component.at(%i))->id = %i\n",i,largest_component.at(i),i,frames.at(largest_component.at(i))->id);
-		pcl::PointCloud<pcl::PointXYZRGB> c = frames.at(largest_component.at(i))->input->getCloud();
+        pcl::PointCloud<pcl::PointXYZRGB> c = frames.at(largest_component.at(i))->input->getCloud();
 
 		pcl::PointCloud<pcl::PointXYZRGB>::Ptr cloud2(new pcl::PointCloud<pcl::PointXYZRGB>);
 		cloud2->points.resize(c.points.size());
@@ -198,15 +198,21 @@ void Map3D::savePCD(string path,bool randomcolor, bool trajectory, float resolut
 				cloud2->points[nr_pts].x = c.points[j].x;
 				cloud2->points[nr_pts].y = c.points[j].y;
 				cloud2->points[nr_pts].z = c.points[j].z;
-				cloud2->points[nr_pts].r = c.points[j].r;
-				cloud2->points[nr_pts].g = c.points[j].g;
-				cloud2->points[nr_pts].b = c.points[j].b;
-
-//                if(c.points[j].x < 0){
-//                    cloud2->points[nr_pts].r = 255;
+                cloud2->points[nr_pts].r = c.points[j].r;
+                cloud2->points[nr_pts].g = c.points[j].g;
+                cloud2->points[nr_pts].b = c.points[j].b;
+//                if(i<300){
+//                    cloud2->points[nr_pts].r = 0;
 //                    cloud2->points[nr_pts].g = 0;
 //                    cloud2->points[nr_pts].b = 255;
+//                }else{
+//                    cloud2->points[nr_pts].r = 0;
+//                    cloud2->points[nr_pts].g = 255;
+//                    cloud2->points[nr_pts].b = 0;
 //                }
+//                cloud2->points[nr_pts].r = 0;
+//                cloud2->points[nr_pts].g = 255;
+//                cloud2->points[nr_pts].b = 255-(((i - 0) * (255 - 0)) / (largest_component.size() - 0)) + 0;
 
 				if(randomcolor){
 					cloud2->points[nr_pts].r = tmp_r;
@@ -229,12 +235,29 @@ void Map3D::savePCD(string path,bool randomcolor, bool trajectory, float resolut
 		*cloud += c_trans;
 	}
 
-	pcl::PointCloud<pcl::PointXYZRGB> voxelcloud;
+    //pcl::PointCloud<pcl::PointXYZRGB> voxelcloud;
 
-	sor.setInputCloud (cloud);
-	sor.filter (voxelcloud);
+    //sor.setInputCloud (cloud);
+    //sor.filter (voxelcloud);
 
-	pcl::io::savePCDFileBinary (path, voxelcloud);
+    pcl::CropBox<pcl::PointXYZRGB> cb;
+//    cb.setMin(Eigen::Vector4f(-5, -3, 0, 1.0));
+//    cb.setMax(Eigen::Vector4f(5, 5, 30, 1.0));
+      cb.setMin(Eigen::Vector4f(-10, -1.25, -15, 1.0));
+      cb.setMax(Eigen::Vector4f(10, 2, 8, 1.0));
+    //cb.setRotation(Eigen::Vector3f(theta_x, 0.0, M_PI));
+    cb.setInputCloud(cloud);
+
+    pcl::PointCloud<pcl::PointXYZRGB>::Ptr croppedCloud(new pcl::PointCloud<pcl::PointXYZRGB>);
+    cb.filter(*croppedCloud);
+
+    pcl::PointCloud<pcl::PointXYZRGB> voxelcloud;
+
+    sor.setInputCloud(croppedCloud);
+    sor.filter (voxelcloud);
+
+    pcl::io::savePCDFileBinary (path, voxelcloud);
+    //pcl::io::savePCDFileBinary (path, croppedCloud);
 	if(verbose){std::cerr << "Saved " << voxelcloud.points.size () << " data points." << std::endl;}
 }
 

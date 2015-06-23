@@ -278,8 +278,10 @@ CMakeFiles/map3d_ekzpublic.dir/src/Map/Map3D.cpp.o: /usr/include/pcl-1.7/pcl/con
 CMakeFiles/map3d_ekzpublic.dir/src/Map/Map3D.cpp.o: /usr/include/pcl-1.7/pcl/correspondence.h
 CMakeFiles/map3d_ekzpublic.dir/src/Map/Map3D.cpp.o: /usr/include/pcl-1.7/pcl/exceptions.h
 CMakeFiles/map3d_ekzpublic.dir/src/Map/Map3D.cpp.o: /usr/include/pcl-1.7/pcl/filters/boost.h
+CMakeFiles/map3d_ekzpublic.dir/src/Map/Map3D.cpp.o: /usr/include/pcl-1.7/pcl/filters/crop_box.h
 CMakeFiles/map3d_ekzpublic.dir/src/Map/Map3D.cpp.o: /usr/include/pcl-1.7/pcl/filters/filter.h
 CMakeFiles/map3d_ekzpublic.dir/src/Map/Map3D.cpp.o: /usr/include/pcl-1.7/pcl/filters/filter_indices.h
+CMakeFiles/map3d_ekzpublic.dir/src/Map/Map3D.cpp.o: /usr/include/pcl-1.7/pcl/filters/impl/crop_box.hpp
 CMakeFiles/map3d_ekzpublic.dir/src/Map/Map3D.cpp.o: /usr/include/pcl-1.7/pcl/filters/impl/filter.hpp
 CMakeFiles/map3d_ekzpublic.dir/src/Map/Map3D.cpp.o: /usr/include/pcl-1.7/pcl/filters/impl/filter_indices.hpp
 CMakeFiles/map3d_ekzpublic.dir/src/Map/Map3D.cpp.o: /usr/include/pcl-1.7/pcl/filters/impl/passthrough.hpp
